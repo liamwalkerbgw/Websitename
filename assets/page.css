@@ -23,7 +23,8 @@ section{padding:56px 0}
 .step{background:var(--bgw-bg);border-top:3px solid var(--bgw-orange);padding:22px}
 .step b{display:block;font-size:15px;margin-bottom:6px}
 .step p{font-size:14px;color:var(--bgw-grey)}
-.cal-wrap{border:1px solid var(--bgw-line);border-radius:6px;min-height:700px;margin-top:20px;background:#fff}
+.cal-wrap{border:1px solid var(--bgw-line);border-radius:6px;height:760px;margin-top:20px;background:#fff;overflow:hidden}
+.cal-wrap iframe{display:block;width:100%!important;height:100%!important;border:0}
 .btn{display:inline-block;padding:14px 26px;font-size:14px;letter-spacing:.08em;font-weight:700;text-transform:uppercase;text-decoration:none;border-radius:2px}
 .btn-primary{background:var(--bgw-orange);color:#fff}
 .btn-primary:hover{background:var(--bgw-orange-dark)}
@@ -36,5 +37,5 @@ section{padding:56px 0}
 footer{background:#000;color:#888;padding:36px 0;font-size:12px;line-height:1.7}
 footer p{margin-bottom:8px}
 footer a{color:#aaa}
-@media(max-width:780px){h1{font-size:30px}.steps{grid-template-columns:1fr}.nav-logo img{height:auto;width:min(56vw,230px)}.band{padding:52px 0 44px}}
+@media(max-width:780px){.cal-wrap{height:1080px}h1{font-size:30px}.steps{grid-template-columns:1fr}.nav-logo img{height:auto;width:min(56vw,230px)}.band{padding:52px 0 44px}}
 :focus-visible{outline:2px solid var(--bgw-orange);outline-offset:2px}
