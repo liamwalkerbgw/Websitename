@@ -1,0 +1,34 @@
+# Netlify settings for roccoandliambgw.com (static site, no build step)
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000"
+
+# Images and icons rarely change: cache for a week
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Scripts change when IDs are added: always re-check
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/thank-you/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# Send any old netlify.app links and www to the main domain
+[[redirects]]
+  from = "https://roccoandliamwebsite.netlify.app/*"
+  to = "https://roccoandliambgw.com/:splat"
+  status = 301
+  force = true

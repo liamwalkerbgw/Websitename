@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<title>Thank you | Boston Global Wealth</title>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0c0c0c">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="/assets/track.js"></script>
+<link rel="stylesheet" href="/assets/page.css">
+</head>
+<body data-thankyou>
+<nav class="nav"><div class="nav-inner">
+  <a href="/" class="nav-logo" aria-label="Boston Global Wealth – home"><img src="/assets/logo.png" alt="Boston Global Wealth" width="442" height="28"></a>
+  <a href="https://calendly.com/liam-bostonglobalwealth/30min" data-book="thankyou-nav" class="nav-cta">Book a call</a>
+</div></nav>
+
+<div class="band"><div class="container">
+  <div class="eyebrow" id="ty-eyebrow">Enquiry received</div>
+  <h1 id="ty-title">Thank you<span id="ty-name"></span>. <span class="accent">We'll be in touch.</span></h1>
+  <p class="lede" id="ty-lede">Your enquiry has gone straight to Liam and Rocco. One of us will contact you within one business day, usually sooner.</p>
+</div></div>
+
+<section id="book-section"><div class="container">
+  <div class="eyebrow">Skip the wait</div>
+  <h2 style="margin-top:0">Pick a time for your <span class="accent">complimentary 30-minute call</span></h2>
+  <p style="color:#5a5a5a;max-width:680px">Choose a time below and it's locked in. You'll get a Microsoft Teams invite straight away, and there's no obligation.</p>
+  <div class="cal-wrap" id="cal-inline" aria-label="Booking calendar"></div>
+</div></section>
+
+<section id="booked-section" hidden><div class="container">
+  <h2 style="margin-top:0">What happens next</h2>
+  <div class="steps">
+    <div class="step"><b>1. Check your inbox</b><p>Your calendar invite and Teams link are on their way. Add it to your calendar so it isn't missed.</p></div>
+    <div class="step"><b>2. A quick prep note</b><p>We may email a few questions beforehand so we can make the most of your time.</p></div>
+    <div class="step"><b>3. Your consultation</b><p>A relaxed conversation about your goals, current portfolio and where we may be able to help.</p></div>
+  </div>
+  <div class="actions"><a class="btn btn-primary" href="/">Back to the website</a></div>
+</div></section>
+
+<footer><div class="container">
+  <p>General Advice Only and not personal advice. Information displayed herein does not take into account your objectives, financial situation or needs. Past performance is not a reliable indicator of future performance.</p>
+  <p>Boston Global Wealth Pty Ltd ABN 99 691 504 506 is a Corporate Authorised Representative (No. 1318023) of Advisory Circle Pty Ltd ABN 21 629 143 460, AFSL No. 513052.</p>
+  <p>&copy; 2026 Boston Global Wealth Pty Ltd &nbsp;·&nbsp; <a href="/privacy/">Privacy Policy</a> &nbsp;·&nbsp; <a href="/">Home</a></p>
+</div></footer>
+
+<script src="/assets/site.js"></script>
+<script>
+(function () {
+  function ss(k, v) { try { if (v === undefined) return JSON.parse(sessionStorage.getItem(k) || 'null'); if (v === null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
+  var type = new URLSearchParams(location.search).get('t') || 'enquiry';
+  var lead = ss('bgw_lead') || {};
+  if (lead.firstname) document.getElementById('ty-name').textContent = ', ' + String(lead.firstname).slice(0, 40);
+
+  function showBooked() {
+    document.getElementById('ty-eyebrow').textContent = 'Consultation booked';
+    var t = document.getElementById('ty-title');
+    t.textContent = 'You\u2019re booked in' + (lead.firstname ? ', ' + String(lead.firstname).slice(0, 40) : '') + '. ';
+    var sp = document.createElement('span'); sp.className = 'accent'; sp.textContent = 'We look forward to speaking with you.'; t.appendChild(sp);
+    document.getElementById('ty-lede').textContent = 'Your consultation with Liam and Rocco is confirmed. A calendar invite with the Microsoft Teams link has been sent to your email.';
+    document.getElementById('book-section').hidden = true;
+    document.getElementById('booked-section').hidden = false;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  window.BGW_onBooked = showBooked;
+
+  // Fire the enquiry conversion exactly once (refreshing this page won't double count)
+  var conv = ss('bgw_conv');
+  if (conv && conv.type === 'lead' && !conv.fired) {
+    window.BGW_TRACK('lead', Object.assign({ event_id: conv.id, label: 'Website enquiry' }, lead));
+    conv.fired = true; ss('bgw_conv', conv);
+  }
+
+  if (type === 'booking') showBooked();
+  else window.BGW_inlineBooking(document.getElementById('cal-inline'));
+})();
+</script>
+</body>
+</html>
