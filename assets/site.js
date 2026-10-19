@@ -107,6 +107,43 @@
     });
   }
 
+  /* ---------------- Market Wrap newsletter signup ---------------- */
+  var nl = document.getElementById('newsletter-form');
+  if (nl) {
+    var nlStart = Date.now();
+    var nlA = attr();
+    Object.keys(nlA).forEach(function (k) { var f = nl.querySelector('[name="' + k + '"]'); if (f) f.value = nlA[k]; });
+    var nlStatus = document.getElementById('nl-status'), nlBtn = nl.querySelector('button[type="submit"]');
+    nl.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!nl.checkValidity()) { nl.reportValidity(); return; }
+      var fd = new FormData(nl);
+      var who = { email: String(fd.get('email') || '').trim(), firstname: String(fd.get('firstname') || '').trim(), phone: String(fd.get('phone') || '').trim() };
+      function done() {
+        nl.innerHTML = '<p class="nl-done">You’re subscribed' + (who.firstname ? ', ' + who.firstname.replace(/[<>&"]/g, '').slice(0, 40) : '') +
+          '. The next Market Wrap will land in your inbox.</p>';
+      }
+      if (fd.get('bot-field') || Date.now() - nlStart < 1200) { done(); return; }
+      nlBtn.disabled = true; nlBtn.textContent = 'Subscribing…';
+      // 1) Netlify Forms (backup copy + HubSpot collected-forms capture)
+      var p1 = fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() });
+      // 2) Campaign Monitor list (sends the Market Wrap)
+      if (C.cmFormAction && C.cmEmailField) {
+        var cm = new URLSearchParams(); cm.append(C.cmEmailField, who.email);
+        if (C.cmNameField && who.firstname) cm.append(C.cmNameField, who.firstname);
+        fetch(C.cmFormAction, { method: 'POST', mode: 'no-cors', body: cm }).catch(function () {});
+      }
+      p1.then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        track('signup', who);   // Meta CompleteRegistration, GA4 sign_up, HubSpot identify
+        done();
+      }).catch(function () {
+        nlBtn.disabled = false; nlBtn.textContent = 'Subscribe';
+        nlStatus.textContent = 'Sorry, that didn’t go through. Please try again.';
+      });
+    });
+  }
+
   /* ---------------- Mobile "Book a call" bar ---------------- */
   var bar = document.getElementById('mobile-cta');
   if (bar && 'IntersectionObserver' in window) {
