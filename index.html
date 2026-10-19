@@ -324,10 +324,11 @@
   .newsletter h2{margin-bottom:12px}
   .nl-lede{color:#4a4339;font-size:16.5px;max-width:520px}
   .nl-form{background:transparent;padding:0;box-shadow:none;border-radius:0}
-  .nl-fields{display:grid;grid-template-columns:1fr 1.4fr auto;gap:10px}
+  .nl-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .nl-fields input{padding:14px 16px;border:1.5px solid #cfc3b1;background:#fff;font-size:15.5px;font-family:inherit;border-radius:3px;width:100%}
   .nl-fields input:focus{outline:none;border-color:var(--bgw-orange);box-shadow:0 0 0 3px rgba(227,107,67,.18)}
   .nl-fields .btn{border-radius:3px;white-space:nowrap}
+  #nl-first{order:1}#nl-phone{order:2}#nl-email{order:3;grid-column:1/-1}.nl-fields .btn{order:4;grid-column:1/-1}
   .nl-small{font-size:12px;color:#6b6257;margin-top:10px}
   .nl-small a{text-decoration:underline}
   .nl-done{font-size:17px;font-weight:600;color:var(--bgw-ink);background:#fff;padding:18px 22px;border-left:3px solid var(--bgw-orange)}
@@ -548,9 +549,11 @@
         <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="first_source"><input type="hidden" name="landing_page">
         <div class="nl-fields">
           <label class="sr" for="nl-first">First name</label>
-          <input id="nl-first" type="text" name="firstname" placeholder="First name" autocomplete="given-name">
+          <input id="nl-first" type="text" name="firstname" placeholder="First name" autocomplete="given-name" required>
           <label class="sr" for="nl-email">Email</label>
           <input id="nl-email" type="email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" required>
+          <label class="sr" for="nl-phone">Mobile</label>
+          <input id="nl-phone" type="tel" name="phone" placeholder="Mobile" autocomplete="tel" inputmode="tel" pattern="[0-9+()\s-]{8,}" title="Please enter a valid mobile number" required>
           <button type="submit" class="btn btn-primary">Subscribe</button>
         </div>
         <p class="nl-small" id="nl-status" role="status" aria-live="polite"></p>
