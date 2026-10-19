@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liam Walker &amp; Rocco Panzarino | Private Wealth Advisers Sydney | Boston Global Wealth</title>
+<title>Private Wealth Advisers Sydney | Liam Walker &amp; Rocco Panzarino | Boston Global Wealth</title>
 <meta name="description" content="Liam Walker &amp; Rocco Panzarino are Founding Partners &amp; Private Wealth Advisers at Boston Global Wealth, delivering private-market access, portfolio management and family-office services for high-net-worth individuals, wholesale investors and family offices.">
 <link rel="canonical" href="https://roccoandliambgw.com/">
 <meta name="theme-color" content="#0c0c0c">
@@ -74,11 +74,11 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1180px;margin:0 auto}
   .nav-logo img{height:30px;width:auto;display:block}
   .nav-links{display:flex;gap:28px;font-size:14px}
-  .nav-links a{color:#ddd;transition:color .2s}
+  .nav-links a{color:#ddd;transition:color .2s;white-space:nowrap}
   .nav-links a:hover{color:var(--bgw-orange)}
   .nav-cta{background:var(--bgw-orange);color:#fff;padding:10px 18px;border-radius:2px;font-size:13px;letter-spacing:.05em;font-weight:600;transition:background .2s;white-space:nowrap}
   .nav-cta:hover{background:var(--bgw-orange-dark)}
-  @media(max-width:780px){.nav-links{display:none}}
+  @media(max-width:1040px){.nav-links{display:none}}
 
   /* HERO */
   .hero{background:var(--bgw-black);color:#fff;padding:90px 0 130px;position:relative;overflow:hidden}
@@ -162,7 +162,7 @@
 
   /* PROCESS */
   .process{background:#fff}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:8px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
   .step{position:relative;padding-top:18px}
   .step .num{font-size:64px;line-height:1;color:var(--bgw-cream);font-weight:800;letter-spacing:-.04em;position:absolute;top:-18px;left:-4px;z-index:0}
   .step .body{position:relative;z-index:1;padding-left:8px}
@@ -275,6 +275,64 @@
   .footer-legal a{display:inline;color:#888;margin:0}
   .footer-legal a:hover{color:var(--bgw-orange)}
   .legal-links{line-height:2}
+
+  /* NUMBERS */
+  .numbers{background:#141414;color:#fff;border-top:1px solid #222;border-bottom:1px solid #222;padding:34px 0 22px}
+  .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .nstat{border-left:2px solid var(--bgw-orange);padding-left:16px}
+  .nstat b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+  .nstat span{display:block;color:#bdb5a9;font-size:12.5px;letter-spacing:.03em;margin-top:6px;line-height:1.4}
+  .num-note{color:#6f6a63;font-size:11px;margin-top:20px}
+  @media(max-width:880px){.num-grid{grid-template-columns:1fr 1fr;gap:22px 16px}.nstat b{font-size:26px}}
+
+  /* DIFFERENCE */
+  .diff{background:#fff}
+  .diff-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+  .diff .lede{margin-bottom:30px}
+  .diff-points{display:grid;gap:14px}
+  .dpoint{display:grid;grid-template-columns:auto 1fr;gap:18px;background:var(--bgw-bg);border-left:3px solid var(--bgw-orange);padding:22px 24px}
+  .dnum{font-size:15px;font-weight:800;color:var(--bgw-orange);letter-spacing:.06em;padding-top:2px}
+  .dpoint h3{font-size:17px;margin-bottom:6px}
+  .dpoint p{font-size:14.5px;color:var(--bgw-grey);line-height:1.6}
+  @media(max-width:880px){.diff-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* WHO */
+  .who{background:#fff;border-top:1px solid var(--bgw-line)}
+  .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+  .wcard{display:flex;flex-direction:column;border:1px solid var(--bgw-line);border-top:3px solid var(--bgw-orange);padding:26px 22px;background:#fff;transition:transform .15s,box-shadow .15s}
+  .wcard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+  .wcard h3{font-size:17px;margin-bottom:10px}
+  .wcard p{font-size:14.5px;color:var(--bgw-grey);line-height:1.6;flex:1}
+  .wmore{margin-top:16px;color:var(--bgw-orange-dark);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  @media(max-width:980px){.who-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.who-grid{grid-template-columns:1fr}}
+  .values-line{margin-top:36px;color:var(--bgw-grey);font-size:14px;text-align:center}
+  .values-line b{color:var(--bgw-ink)}
+
+  /* PLATFORMS */
+  .platforms{background:#fff;border-top:1px solid var(--bgw-line);border-bottom:1px solid var(--bgw-line);padding:44px 0 40px}
+  .plat-title{text-align:center;color:var(--bgw-grey);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:30px}
+  .plat-logos{display:flex;align-items:center;justify-content:space-around;gap:32px;flex-wrap:wrap;max-width:860px;margin:0 auto}
+  .plat-logos img{width:auto;display:block}
+  .pl-mq{height:30px}.pl-pr{height:54px}.pl-mo{height:50px}
+  .plat-cap{text-align:center;color:#7a7269;font-size:13.5px;max-width:660px;margin:28px auto 0;line-height:1.6}
+  @media(max-width:600px){.plat-logos{gap:22px 28px}.pl-mq{height:22px}.pl-pr{height:40px}.pl-mo{height:38px}}
+
+  /* NEWSLETTER */
+  .newsletter{background:var(--bgw-cream);padding:72px 0}
+  .nl-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+  .newsletter h2{margin-bottom:12px}
+  .nl-lede{color:#4a4339;font-size:16.5px;max-width:520px}
+  .nl-form{background:transparent;padding:0;box-shadow:none;border-radius:0}
+  .nl-fields{display:grid;grid-template-columns:1fr 1.4fr auto;gap:10px}
+  .nl-fields input{padding:14px 16px;border:1.5px solid #cfc3b1;background:#fff;font-size:15.5px;font-family:inherit;border-radius:3px;width:100%}
+  .nl-fields input:focus{outline:none;border-color:var(--bgw-orange);box-shadow:0 0 0 3px rgba(227,107,67,.18)}
+  .nl-fields .btn{border-radius:3px;white-space:nowrap}
+  .nl-small{font-size:12px;color:#6b6257;margin-top:10px}
+  .nl-small a{text-decoration:underline}
+  .nl-done{font-size:17px;font-weight:600;color:var(--bgw-ink);background:#fff;padding:18px 22px;border-left:3px solid var(--bgw-orange)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  @media(max-width:880px){.nl-grid{grid-template-columns:1fr;gap:24px}.nl-fields{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
@@ -286,11 +344,10 @@
       <img src="/assets/logo.png" alt="Boston Global Wealth" width="474" height="30">
     </a>
     <div class="nav-links">
+      <a href="#difference">Our Difference</a>
       <a href="#profiles">Partners</a>
-      <a href="#about">About</a>
-      <a href="#why">Why Us</a>
-      <a href="#process">Process</a>
-      <a href="#services">Services</a>
+      <a href="#who">Who We Help</a>
+      <a href="#markets">Private Markets</a>
       <a href="#contact">Contact</a>
     </div>
     <a href="https://calendly.com/liam-bostonglobalwealth/30min" data-book="nav" target="_blank" rel="noopener" class="nav-cta">Let's Talk</a>
@@ -302,32 +359,60 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-eyebrow">Founding Partners · Boston Global Wealth</div>
-        <h1>Liam <span class="accent">Walker</span><br>&amp; Rocco <span class="accent">Panzarino</span></h1>
-        <div class="role">Private Wealth Advisers &nbsp;·&nbsp; RG 146 &nbsp;·&nbsp; Sydney, Australia</div>
+        <div class="hero-eyebrow">Liam Walker &amp; Rocco Panzarino · Boston Global Wealth</div>
+        <h1>Private-market access, <span class="accent">without family-office minimums.</span></h1>
+        <div class="role">Two senior advisers on every portfolio &nbsp;·&nbsp; Founding Partners &nbsp;·&nbsp; Sydney</div>
         <blockquote>
-          "Wealth creation is not a transaction - it is a relationship built on trust, rigour, and a shared vision for what endures."
-          <cite>Liam Walker &amp; Rocco Panzarino - Founding Partners</cite>
+          "Most portfolios we review are diversified on paper and concentrated in practice: the same ASX names held three different ways, and nothing in private markets."
+          <cite>Liam Walker &amp; Rocco Panzarino, Founding Partners</cite>
         </blockquote>
         <div class="hero-ctas">
           <a href="https://calendly.com/liam-bostonglobalwealth/30min" data-book="hero" target="_blank" rel="noopener" class="btn btn-primary">Book a Consultation</a>
-          <a href="#profiles" class="btn btn-ghost">Meet the Partners</a>
+          <a href="#difference" class="btn btn-ghost">Why two advisers?</a>
         </div>
       </div>
       <div class="hero-photo">
         <div class="frame">
           <picture><source srcset="/assets/hero.webp" type="image/webp"><img src="/assets/hero.jpg" width="900" height="1349" fetchpriority="high" alt="Liam Walker and Rocco Panzarino, Founding Partners at Boston Global Wealth"></picture>
           <div class="photo-names">
-            <div class="pnt">
-              <div class="pname">Liam Walker</div>
-              <div class="prole">Founding Partner</div>
-            </div>
-            <div class="pnt">
-              <div class="pname">Rocco Panzarino</div>
-              <div class="prole">Founding Partner</div>
-            </div>
+            <div class="pnt"><div class="pname">Liam Walker</div><div class="prole">Founding Partner</div></div>
+            <div class="pnt"><div class="pname">Rocco Panzarino</div><div class="prole">Founding Partner</div></div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<div class="numbers" aria-label="Boston Global Wealth at a glance">
+  <div class="container">
+    <div class="num-grid">
+      <div class="nstat"><b>9</b><span>Investment Committee members</span></div>
+      <div class="nstat"><b>100+</b><span>Years' combined committee experience</span></div>
+      <div class="nstat"><b>6</b><span>Asset classes</span></div>
+      <div class="nstat"><b>$100K</b><span>Minimum private-market investment<sup>*</sup></span></div>
+    </div>
+    <p class="num-note">* Private-market opportunities are available to wholesale and sophisticated investors only (s.761G Corporations Act 2001). Capital is at risk.</p>
+  </div>
+</div>
+
+<!-- OUR DIFFERENCE -->
+<section class="diff" id="difference">
+  <div class="container">
+    <div class="diff-grid">
+      <div>
+        <div class="section-label">Our Difference</div>
+        <h2>Two senior advisers on every account. <span class="accent">Not one.</span></h2>
+        <p class="lede">Most advisers run their book alone. If they're away, busy or move on, so does the knowledge of your portfolio. Liam and Rocco share one book, so every client has two senior advisers who know their wealth in detail.</p>
+        <div class="hero-ctas">
+          <a href="https://calendly.com/liam-bostonglobalwealth/30min" data-book="difference" target="_blank" rel="noopener" class="btn btn-primary">Meet both of us</a>
+        </div>
+      </div>
+      <div class="diff-points">
+        <div class="dpoint"><div class="dnum">01</div><div><h3>No single point of failure</h3><p>If one of us is travelling, unwell or tied up, the other already knows your portfolio, your goals and your history. You never start again with someone new.</p></div></div>
+        <div class="dpoint"><div class="dnum">02</div><div><h3>Two sets of eyes on every decision</h3><p>Every recommendation is reviewed by both partners before it reaches you, then tested against BGW's Investment Committee framework.</p></div></div>
+        <div class="dpoint"><div class="dnum">03</div><div><h3>Continuity across generations</h3><p>Your family's relationship doesn't depend on one person. Two partners means consistency for you, your children and your estate.</p></div></div>
       </div>
     </div>
   </div>
@@ -341,79 +426,35 @@
     <p class="lede">As Founding Partners of Boston Global Wealth, Liam and Rocco helped shape the firm from day one, combining institutional discipline, private-market access and the kind of long-term client relationships that only come from genuine trust.</p>
     <div class="profiles-grid">
       <div class="pcard">
-        <div class="pcard-num">01</div>
         <h3>Liam <span class="accent">Walker</span></h3>
         <span class="pcard-role">Founding Partner &amp; Private Wealth Adviser</span>
         <div class="pcard-rule"></div>
-        <p>Liam Walker is a Founding Partner at Boston Global Wealth - one of six who helped build the structure, culture and client experience from the ground up. He brings a rare combination of meticulous oversight and genuine client-first values to every engagement.</p>
-        <p>Liam acts exclusively for private clients, high-net-worth individuals, institutions, family offices and charities, taking personal responsibility for the outcomes he delivers. Backed by BGW's proprietary global research, his clients gain access to an investment framework designed for today's most complex wholesale and retail needs.</p>
-        <p>Whether you are a high-net-worth individual or family, a charitable foundation, or a wholesale investor, Liam's promise is simple: understand you deeply, then act solely in your best interests.</p>
-        <div class="pcard-tags">
-          <span class="ptag">Wealth Management</span>
-          <span class="ptag">Private Markets</span>
-          <span class="ptag">SMSF Strategy</span>
-          <span class="ptag">Family Office</span>
-          <span class="ptag">HNW Individuals</span>
-        </div>
+        <p>Liam is one of six Founding Partners who built Boston Global Wealth's structure, culture and client experience from the ground up. He brings meticulous oversight and genuine client-first values to every engagement.</p>
+        <p>He acts for private clients, high-net-worth individuals, family offices and charities, backed by BGW's proprietary global research. His promise is simple: understand you deeply, then act solely in your best interests.</p>
+        <div class="pcard-tags"><span class="ptag">Wealth Management</span><span class="ptag">Private Markets</span><span class="ptag">SMSF Strategy</span><span class="ptag">Family Office</span></div>
       </div>
       <div class="pcard">
-        <div class="pcard-num">02</div>
         <h3>Rocco <span class="accent">Panzarino</span></h3>
         <span class="pcard-role">Founding Partner &amp; Private Wealth Adviser</span>
         <div class="pcard-rule"></div>
-        <p>Rocco Panzarino is a Founding Partner at Boston Global Wealth, bringing deep expertise in investment strategy and private-market access to a select book of wholesale and high-net-worth clients.</p>
-        <p>As a Private Wealth Adviser, Rocco works closely with clients to design and implement bespoke investment portfolios spanning public equities, fixed income, alternatives and private markets. His approach is anchored in rigorous research, unconflicted advice and a genuine commitment to client outcomes, backed by the full depth of Boston Global Group's investment-banking platform.</p>
-        <p>Rocco's mandate is clear: understand each client's goals completely, construct a disciplined strategy to meet them, and hold himself accountable to the outcomes that follow.</p>
-        <div class="pcard-tags">
-          <span class="ptag">Investment Strategy</span>
-          <span class="ptag">Portfolio Construction</span>
-          <span class="ptag">Private Markets</span>
-          <span class="ptag">Wholesale Investors</span>
-          <span class="ptag">Retirement Planning</span>
-        </div>
+        <p>Rocco brings deep expertise in investment strategy and private-market access, designing portfolios across public equities, fixed income, alternatives and private markets for wholesale and high-net-worth clients.</p>
+        <p>His approach is anchored in rigorous research and unconflicted advice, backed by Boston Global Group's investment-banking platform. His mandate: understand your goals completely, build a disciplined strategy, and be accountable for the outcome.</p>
+        <div class="pcard-tags"><span class="ptag">Investment Strategy</span><span class="ptag">Portfolio Construction</span><span class="ptag">Wholesale Investors</span><span class="ptag">Retirement Planning</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+<!-- WHO WE WORK WITH -->
+<section class="who" id="who">
   <div class="container">
-    <div class="section-label">About Liam &amp; Rocco</div>
-    <h2>A trusted partnership navigating complexity, <span class="accent">building</span> generational wealth.</h2>
-    <div class="about-grid">
-      <div>
-        <p>Together, Liam and Rocco represent a rare combination of institutional rigour and deeply personal client relationships - two advisers who built Boston Global Wealth from day one and share a single philosophy: unconflicted, research-driven advice in the sole interest of the client.</p>
-        <p>Backed by BGW's proprietary global research and a hand-picked team of Australia's finest investment strategists, portfolio managers and wealth specialists, their clients gain access to an investment strategy designed from the ground up for today's most complex wholesale and retail needs.</p>
-        <p>Whether you are a high-net-worth individual or family, a charitable foundation, or an emerging wholesale investor, the promise is simple: understand you deeply, then act solely in your best interests.</p>
-        <br>
-        <p style="font-weight:600;color:var(--bgw-ink)">Liam &amp; Rocco work with you if you are:</p>
-        <ul class="check-list" style="margin-top:16px">
-          <li>Seeking unconflicted advisers to manage and grow your wealth</li>
-          <li>Looking for institutional-grade access to private markets &amp; alternatives</li>
-          <li>Frustrated by underperforming portfolios or generic, off-the-shelf advice</li>
-          <li>Planning for retirement, succession or intergenerational wealth transfer</li>
-          <li>Running an SMSF that deserves family-office discipline</li>
-        </ul>
-      </div>
-      <div class="about-cards">
-        <div class="acard">
-          <h4>Founding Partners at BGW</h4>
-          <p>Two of six Founding Partners who built Boston Global Wealth from the ground up, helping to shape its investment philosophy and client culture from day one.</p>
-        </div>
-        <div class="acard">
-          <h4>Institutional Backing</h4>
-          <p>Supported by Boston Global Group's investment-banking platform with over 40 years of industry expertise and the research and oversight of the BGW Investment Committee.</p>
-        </div>
-        <div class="acard">
-          <h4>Private Market Access</h4>
-          <p>Clients receive curated exposure to private credit, real assets, infrastructure, pre-IPO equity and alternatives - deal flow simply unavailable through retail platforms or industry funds.</p>
-        </div>
-        <div class="acard">
-          <h4>Lifelong Relationships</h4>
-          <p>Their mandate isn't quarterly returns. It's capital preservation, compounding and what you leave behind - with our team ensuring consistent investment reporting, annual deep reviews and lifelong partnership.</p>
-        </div>
-      </div>
+    <div class="section-label">Who We Work With</div>
+    <h2>Advice built around <span class="accent">where you are.</span></h2>
+    <div class="who-grid">
+      <a class="wcard" href="/smsf/"><h3>SMSF Trustees</h3><p>Family-office discipline for your fund, with private credit and private markets alongside listed assets.</p><span class="wmore">Learn more &rarr;</span></a>
+      <a class="wcard" href="/business-owners/"><h3>Business Owners</h3><p>Turning business success into personal wealth, with structuring coordinated with your accountant.</p><span class="wmore">Learn more &rarr;</span></a>
+      <a class="wcard" href="/retirees/"><h3>Retirees &amp; Pre-Retirees</h3><p>Reliable income, capital preservation and a clear plan for drawing down.</p><span class="wmore">Learn more &rarr;</span></a>
+      <a class="wcard" href="/families/"><h3>Families &amp; Next Generation</h3><p>Succession, intergenerational transfer and family-office services under one plan.</p><span class="wmore">Learn more &rarr;</span></a>
     </div>
   </div>
 </section>
@@ -423,71 +464,12 @@
   <div class="container">
     <div class="section-label">Why Liam &amp; Rocco</div>
     <h2>Institutional capability. <span class="accent">Personal</span> alignment.</h2>
-    <p class="lede">Backed by true Family Office access, every recommendation Liam and Rocco make is anchored in rigorous research, deep due diligence and a single, simple obligation: your best interests.</p>
     <div class="why-cards">
-      <div class="why-card">
-        <div class="icon">01</div>
-        <h3>Direct Access to Your Adviser</h3>
-        <p>You work directly with Liam and Rocco - not a call centre, not a junior. Both advisers, two accountable points of contact, with the time and attention your wealth deserves.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">02</div>
-        <h3>Unconflicted Advice</h3>
-        <p>Client-first in everything. Transparent fees, plain-language communication on risk and strategy, and no kick-backs, platform incentives or hidden conflicts of interest.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">03</div>
-        <h3>Private Market Access</h3>
-        <p>Curated allocations from BGW's institutional investment pipeline spanning private credit, infrastructure, pre-IPO equity and real assets, sized appropriately to each client's portfolio.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">04</div>
-        <h3>Institutional Discipline</h3>
-        <p>Every portfolio recommendation is stress-tested against BGW's Investment Committee framework, vetted and refined across decades of multi-billion-dollar mandates.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">05</div>
-        <h3>Coordinated With Your Accountant</h3>
-        <p>Through BGW's partnership with Affluens360, Liam and Rocco can integrate wealth advice with tax structuring, SMSF strategy, property and lending: one plan, zero silos.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">06</div>
-        <h3>Built for Generations</h3>
-        <p>Their mandate isn't quarterly returns. It's capital preservation, compounding, and what you leave behind for your loved ones. Quarterly portal reporting, annual deep reviews, lifelong relationships across multi-generations.</p>
-      </div>
+      <div class="why-card"><div class="icon">01</div><h3>Unconflicted Advice</h3><p>Transparent fees, plain-language communication on risk and strategy, and no kick-backs, platform incentives or hidden conflicts of interest.</p></div>
+      <div class="why-card"><div class="icon">02</div><h3>Institutional Discipline</h3><p>Every portfolio recommendation is stress-tested against the framework of BGW's nine-member Investment Committee.</p></div>
+      <div class="why-card"><div class="icon">03</div><h3>Coordinated With Your Accountant</h3><p>Through BGW's partnership with Affluens360, wealth advice is integrated with tax structuring, SMSF strategy, property and lending: one plan, zero silos.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="section-label">How We Work With Clients</div>
-    <h2>A clear, considered path — from first conversation to <span class="accent">lifelong partnership.</span></h2>
-    <p class="lede">Three straightforward steps from initial conversation to a fully implemented, continuously managed wealth strategy.</p>
-    <div class="steps">
-      <div class="step">
-        <div class="num">01</div>
-        <div class="body">
-          <h3>Initial Consultation</h3>
-          <p>A complimentary strategic call to understand your objectives, risk profile and current portfolio. Together we explore the macro environment and identify where rigour, research and access can improve your position.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num">02</div>
-        <div class="body">
-          <h3>Asset Allocation Strategy</h3>
-          <p>A bespoke portfolio plan spanning three to five years, built across public equities, fixed income, alternatives and private markets, stress-tested for liquidity, tax efficiency and risk-adjusted return.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num">03</div>
-        <div class="body">
-          <h3>Implementation &amp; Ongoing Review</h3>
-          <p>Seamless transition into the new strategy with quarterly performance analytics delivered via secure client portal. Continuous monitoring, scenario sensitivity and proactive contact whenever opportunities arise.</p>
-        </div>
-      </div>
-    </div>
+    <p class="values-line"><b>Our values:</b> clients first &nbsp;·&nbsp; enduring connections &nbsp;·&nbsp; excellence in expertise &nbsp;·&nbsp; future-forward thinking &nbsp;·&nbsp; giving back</p>
   </div>
 </section>
 
@@ -495,15 +477,11 @@
 <section class="services" id="services">
   <div class="container">
     <div class="section-label">Our Services</div>
-    <h2>One integrated platform across <span class="accent">six core capabilities.</span></h2>
-    <p class="lede">A multi-layered investment platform combining private-wealth advisory, tailored financial planning, and exclusive access to off-market opportunities sourced through the Boston Global Group network.</p>
+    <h2>Three core <span class="accent">capabilities.</span></h2>
     <div class="svc-grid">
-      <div class="svc"><h3>Wealth Management</h3><p>Bespoke portfolio construction designed to preserve and grow capital across generations with disciplined oversight and a structured framework.</p></div>
-      <div class="svc"><h3>Investment Advice</h3><p>Investment advice backed by global research and deep market insight, delivered directly by senior advisers with no intermediaries.</p></div>
-      <div class="svc"><h3>Institutional Dealing</h3><p>Direct, high-touch access to domestic and international equities, fixed income and derivatives.</p></div>
-      <div class="svc"><h3>Financial Planning</h3><p>Bespoke financial planning integrating tax, estate, retirement and philanthropic strategies for your complete financial future.</p></div>
-      <div class="svc"><h3>Family Office Services</h3><p>Single and multi-family office solutions: consolidated reporting, governance, concierge and next-generation wealth preparation.</p></div>
-      <div class="svc"><h3>Global Market Access</h3><p>Real-time access to international exchanges, private markets and currencies across developed, emerging and frontier markets, from one integrated platform.</p></div>
+      <div class="svc"><h3>Wealth Management &amp; Advice</h3><p>Bespoke portfolio construction and investment advice across equities, fixed income and alternatives, delivered directly by two senior advisers and backed by global research.</p></div>
+      <div class="svc"><h3>Private Markets &amp; Dealing</h3><p>Curated private credit, infrastructure, pre-IPO and real-asset opportunities, plus high-touch access to domestic and international equities and fixed income.</p></div>
+      <div class="svc"><h3>Family Office &amp; Planning</h3><p>Consolidated reporting, tax, estate, retirement and succession planning, and next-generation wealth preparation for families and foundations.</p></div>
     </div>
   </div>
 </section>
@@ -513,44 +491,71 @@
   <div class="container">
     <div class="pma-grid">
       <div>
-        <div class="section-label">Unparalleled Private Market Access</div>
+        <div class="section-label">Private Market Access</div>
         <h2>Institutional deal flow, <span class="accent">curated for you.</span></h2>
-        <p class="lede" style="margin-bottom:24px">Through Boston Global Group's investment-banking platform, clients of Liam and Rocco receive curated exposure to private credit, real assets, infrastructure, private and public equity, pre-IPO opportunities and alternatives.</p>
+        <p class="lede" style="margin-bottom:24px">Through Boston Global Group's investment-banking platform, clients receive curated exposure to opportunities typically reserved for institutions, from $100K for wholesale investors.</p>
         <div class="pill-row">
-          <span class="pill">Private Credit</span>
-          <span class="pill">Infrastructure</span>
-          <span class="pill">Pre-IPO Equity</span>
-          <span class="pill">Real Assets</span>
-          <span class="pill">Biotech</span>
-          <span class="pill">Medtech</span>
-          <span class="pill">Agritech</span>
-          <span class="pill">AI</span>
-          <span class="pill">Space &amp; Defence</span>
-          <span class="pill">ESG</span>
+          <span class="pill">Private Credit</span><span class="pill">Infrastructure</span><span class="pill">Pre-IPO Equity</span><span class="pill">Real Assets</span><span class="pill">Healthcare &amp; Biotech</span><span class="pill">Technology</span>
         </div>
       </div>
       <div class="pma-card">
-        <p>BGW sources opportunities across private credit, infrastructure, pre-IPO equity and real assets, with deal terms and minimum sizes typically unavailable to individual investors.</p>
         <p>Every allocation is reviewed by BGW's Investment Committee and sized to each client's portfolio, objectives and risk tolerance.</p>
-        <p>Each investment is backed by deep due diligence and sector expertise so that we are providing institutional-grade allocations that most investors can only access through Liam, Rocco and the BGW team.</p>
+        <p>Each investment is backed by deep due diligence and sector expertise, giving clients institutional-grade allocations most investors can't reach on their own.</p>
         <p class="pma-disc">For wholesale and sophisticated investors only (s.761G Corporations Act 2001). General information only. Capital is at risk.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="values" id="values">
+<!-- PLATFORMS -->
+<div class="platforms">
   <div class="container">
-    <div class="section-label">Our Core Values</div>
-    <h2>Business with <span class="accent">integrity.</span></h2>
-    <p class="lede">Trust is the cornerstone of everything we do, built on ethical conduct, transparency and a relentless focus on client outcomes.</p>
-    <div class="val-grid">
-      <div class="val"><h4>Always Put Clients First</h4><p>Highest ethical standard. Honesty in all dealings. Clear communication on fees, risks and strategy.</p></div>
-      <div class="val"><h4>Cultivate Enduring Connections</h4><p>A trusted network strengthening ties between clients, communities and industry innovators.</p></div>
-      <div class="val"><h4>Excellence in Expertise</h4><p>Strong analytical team, built from decades of experience and robust models.</p></div>
-      <div class="val"><h4>Future-Forward Vision</h4><p>Through multiple economic cycles, understanding market trends as they emerge.</p></div>
-      <div class="val"><h4>Give Back</h4><p>Opportunities that deliver economic return alongside measurable community impact.</p></div>
+    <p class="plat-title">Our Institutional Partners</p>
+    <div class="plat-logos">
+      <img src="/assets/partner-macquarie.png" alt="Macquarie" width="169" height="37" loading="lazy" class="pl-mq">
+      <img src="/assets/partner-praemium.png" alt="Praemium" width="265" height="66" loading="lazy" class="pl-pr">
+      <img src="/assets/partner-morrison.png" alt="Morrison Securities Pty Limited" width="116" height="54" loading="lazy" class="pl-mo">
+    </div>
+    <p class="plat-cap">Rocco and Liam's clients access markets through institutional-grade custody, platform and execution partners.</p>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-label">How We Work With Clients</div>
+    <h2>From first conversation to <span class="accent">lifelong partnership.</span></h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><div class="body"><h3>Initial Consultation</h3><p>A complimentary call with both partners to understand your objectives, risk profile and current portfolio, and where research and access could improve your position.</p></div></div>
+      <div class="step"><div class="num">02</div><div class="body"><h3>Asset Allocation Strategy</h3><p>A bespoke plan across public equities, fixed income, alternatives and private markets, stress-tested for liquidity, tax efficiency and risk-adjusted return.</p></div></div>
+      <div class="step"><div class="num">03</div><div class="body"><h3>Implementation &amp; Review</h3><p>Implementation on established platforms, quarterly reporting via a secure client portal, annual deep reviews and proactive contact when opportunities arise.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="market-wrap">
+  <div class="container">
+    <div class="nl-grid">
+      <div>
+        <div class="section-label">Not ready to talk yet?</div>
+        <h2>Get the BGW <span class="accent">Weekly Market Wrap.</span></h2>
+        <p class="nl-lede">What moved markets this week and what we're watching next, in a five-minute read. Free, weekly, and you can unsubscribe at any time.</p>
+      </div>
+      <form id="newsletter-form" name="newsletter" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="nl-form">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="first_source"><input type="hidden" name="landing_page">
+        <div class="nl-fields">
+          <label class="sr" for="nl-first">First name</label>
+          <input id="nl-first" type="text" name="firstname" placeholder="First name" autocomplete="given-name">
+          <label class="sr" for="nl-email">Email</label>
+          <input id="nl-email" type="email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+        <p class="nl-small" id="nl-status" role="status" aria-live="polite"></p>
+        <p class="nl-small">General information only, not personal advice. See our <a href="/privacy/">Website Privacy &amp; Cookies</a> notice.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -639,9 +644,10 @@
       </div>
       <div>
         <h5>Explore</h5>
-        <a href="#profiles">The Partners</a>
-        <a href="#services">Services</a>
+        <a href="#difference">Our Difference</a>
+        <a href="#who">Who We Help</a>
         <a href="#markets">Private Markets</a>
+        <a href="#market-wrap">Weekly Market Wrap</a>
         <a href="https://calendly.com/liam-bostonglobalwealth/30min" data-book="footer">Book a Consultation</a>
       </div>
       <div>

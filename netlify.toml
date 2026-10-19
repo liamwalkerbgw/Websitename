@@ -32,3 +32,23 @@
   to = "https://roccoandliambgw.com/:splat"
   status = 301
   force = true
+
+# Audience landing pages. Until each page exists, visitors are sent to the
+# homepage contact section. Once /smsf/index.html (etc.) is uploaded, Netlify
+# serves the real page automatically and this rule is ignored.
+[[redirects]]
+  from = "/smsf/*"
+  to = "/?from=smsf#contact"
+  status = 302
+[[redirects]]
+  from = "/business-owners/*"
+  to = "/?from=business-owners#contact"
+  status = 302
+[[redirects]]
+  from = "/retirees/*"
+  to = "/?from=retirees#contact"
+  status = 302
+[[redirects]]
+  from = "/families/*"
+  to = "/?from=families#contact"
+  status = 302
