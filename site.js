@@ -1,7 +1,7 @@
 /* BGW site behaviour: Calendly booking, enquiry form, mobile booking bar, click tracking */
 (function () {
   var C = window.BGW_CONFIG || {};
-  var CAL_URL = C.calendlyUrl || 'https://calendly.com/liam-bostonglobalwealth/30min';
+  var CAL_URL = C.calendlyUrl || 'https://calendly.com/liam-bostonglobalwealth/introductory-call';
   var track = window.BGW_TRACK || function () {};
   var attr = window.BGW_ATTR || function () { return {}; };
 

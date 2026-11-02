@@ -11,7 +11,7 @@ window.BGW_CONFIG = {
   adsBookLabel:  '',                  // conversion label for "Booked consultation"
   hubspotPortal: '442402715',         // HubSpot (Boston Global Wealth, AP1 region)
   hubspotRegion: 'ap1',
-  calendlyUrl:   'https://calendly.com/liam-bostonglobalwealth/30min',
+  calendlyUrl:   'https://calendly.com/liam-bostonglobalwealth/introductory-call',
   // Campaign Monitor (Market Wrap mailing list). From Campaign Monitor: Lists & subscribers >
   // your list > Signup forms > "Copy/paste a form to your site". Paste the form's action URL
   // and the email field's name (looks like 'cm-abcdef-abcdef'). Leave blank to skip.

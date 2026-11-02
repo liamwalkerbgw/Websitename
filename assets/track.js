@@ -11,7 +11,7 @@ window.BGW_CONFIG = {
   adsBookLabel:  '',                  // conversion label for "Booked consultation"
   hubspotPortal: '442402715',         // HubSpot (Boston Global Wealth, AP1 region)
   hubspotRegion: 'ap1',
-  calendlyUrl:   'https://calendly.com/liam-bostonglobalwealth/30min'
+  calendlyUrl:   'https://calendly.com/liam-bostonglobalwealth/introductory-call'
 };
 
 (function () {
