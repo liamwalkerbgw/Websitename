@@ -15,6 +15,7 @@
 
 <!-- Shared site tracking: Meta Pixel, GA4 (G-Z08MJGQLNM), Google Ads, HubSpot and UTM capture.
      Same file the home page uses, so /links/ reports to the same GA4 property and Pixel. -->
+<script>document.documentElement.classList.add("js");</script>
 <script src="/assets/track.js"></script>
 
 <style>
@@ -35,7 +36,7 @@ h1 em{font-style:normal;color:var(--orange)}
 .btn-primary:active{background:var(--orange-dark)}
 .trust{text-align:center;color:var(--grey);font-size:12px;margin:12px 0 6px}
 .qual{text-align:center;color:var(--grey);font-size:12px;margin:0 0 22px}
-.photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 20%;border-radius:14px;border:1px solid var(--line);margin-bottom:12px}
+.photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 20%;border-radius:14px;border:1px solid var(--line);margin-bottom:12px}
 .row{display:flex;gap:10px;margin-top:10px}
 .btn-ghost{flex:1;text-align:center;text-decoration:none;color:var(--cream);border:1.5px solid #4a4a4a;border-radius:12px;padding:13px 8px;font-weight:700;font-size:15px}
 .btn-ghost small{display:block;font-weight:500;font-size:12px;color:var(--grey)}
@@ -74,6 +75,34 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
 .foot-links a{color:var(--cream);text-decoration:none;border-bottom:1px solid #4a4a4a;padding-bottom:1px}
 .legal{font-size:11px;color:#7d7870;margin-top:18px}
 .legal a{color:#7d7870}
+
+/* motion + interaction */
+html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+html.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}}
+.btn-primary,.btn-ghost,.btn-sub{transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,107,67,.38)}
+.btn-primary:active,.btn-ghost:active,.btn-sub:active{transform:scale(.98)}
+.btn-ghost:hover{border-color:var(--orange)}
+.wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+mark{background:rgba(227,107,67,.38);color:#fff;padding:1px 4px;border-radius:4px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:12px 20px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.car::-webkit-scrollbar{display:none}
+.car .ref{flex:0 0 86%;scroll-snap-align:center;margin:0;transform:rotate(var(--r,0deg));box-shadow:0 12px 30px rgba(0,0,0,.55);transition:transform .35s ease}
+.car .ref.active{transform:rotate(0deg)}
+.dots{display:flex;justify-content:center;gap:8px;margin:-4px 0 4px}
+.dots button{width:9px;height:9px;border-radius:50%;border:0;background:#4a4a4a;padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.dots button.on{background:var(--orange);transform:scale(1.25)}
+.hint{text-align:center;color:var(--grey);font-size:12px;margin-top:-6px}
+.acc{background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:2px 18px}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;font-weight:800;font-size:17px;color:var(--cream)}
+.acc summary::-webkit-details-marker{display:none}
+.acc .chev{color:var(--orange);font-size:26px;line-height:1;transition:transform .2s}
+.acc[open] .chev{transform:rotate(45deg)}
+.acc .lede{font-size:13px;color:var(--grey);margin:-4px 0 14px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:22px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(rgba(12,12,12,0),rgba(12,12,12,.96) 45%);transform:translateY(115%);transition:transform .28s ease;pointer-events:none}
+.sticky.show{transform:none}
+.sticky .btn-primary{max-width:448px;margin:0 auto;padding:15px;font-size:17px;pointer-events:auto}
 </style>
 </head>
 <body>
@@ -86,7 +115,7 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
   <p class="sub">Liam Walker &amp; Rocco Panzarino · Founding Partners · Sydney</p>
 
   <!-- 1. PRIMARY ACTION (data-book opens the Calendly popup via /assets/site.js) -->
-  <a class="btn-primary" data-track="book_call_top" data-book="links_top" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">
+  <a class="btn-primary" id="bookBtn" data-track="book_call_top" data-book="links_top" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">
     Book your hour with Rocco and Liam
     <small>Free · online · portfolio and property review · no obligation</small>
   </a>
@@ -101,41 +130,47 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
   </div>
 
   <!-- WHAT YOU GET -->
-  <section class="sec">
+  <section class="sec reveal">
     <div class="eyebrow">What you get</div>
     <h2>What we cover in the hour</h2>
     <div class="item"><b class="n">1</b><div><h3>How your money is set up</h3><p>What you own across every entity, what it costs, and whether it adds up to what the money has to do for you.</p></div></div>
     <div class="item"><b class="n">2</b><div><h3>Where your income comes from</h3><p>How reliable it is and the risk you take to earn it.</p></div></div>
     <div class="item"><b class="n">3</b><div><h3>What a more diversified portfolio could look like</h3><p>Including private and alternative investments alongside shares you can sell any day.</p></div></div>
-    <a class="btn-primary" data-track="book_call_hour" data-book="links_hour" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">Book your hour with Rocco and Liam<small>No cost · no obligation</small></a>
+    <a class="btn-primary" id="hourBtn" data-track="book_call_hour" data-book="links_hour" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">Book your hour with Rocco and Liam<small>No cost · no obligation</small></a>
   </section>
 
   <!-- CLIENT REFERENCES (shortened where marked […]; compliance to approve before publishing) -->
-  <section class="sec" id="references">
+  <section class="sec reveal" id="references">
     <div class="eyebrow">What clients say</div>
     <h2>In their own words</h2>
-    <figure class="ref">
-      <blockquote><span class="q">“</span>Rocco and Liam have been actively engaged with me over the last 12 months. They have tailored my portfolio to suit my stage of life and taking into account my desire for income and growth […] whilst also considering my risk profile. […] There has been no heavy selling from them at all. I am very satisfied with their level of care and interaction.<span class="q">”</span></blockquote>
-      <cite><b>R.S.</b> · Retiree, WA · Client for over 12 months</cite>
-    </figure>
-    <figure class="ref">
-      <blockquote><span class="q">“</span>Liam Walker has been my Financial Advisor for around 2 years. […] I made my first self-managed very significant wholesale investment […] prior to me meeting Liam. This now appears a poor and ill-informed decision. This decision lead to my subsequent commencement of Liam’s Financial Advisor services and, so far, I am very pleased with my decision to do so. Liam has been able to introduce me to several far superior investments over the last couple of years. […] I feel that my interests have been properly listened to, considered and prioritised by Liam throughout our relationship and I feel that Liam is on my side, wishes me success and has my best interests at heart. […] My dealings with Boston Global Wealth have only been positive and superior to my previous experiences with investment firms and investment houses as well, so I have absolutely no hesitation in recommending that you consider Liam for advice and direction in managing your investment portfolio. I find it an absolute pleasure to work with him.<span class="q">”</span></blockquote>
-      <cite><b>D.T.</b> · Business owner, QLD · Client of Liam and Rocco</cite>
-    </figure>
+    <div class="car" id="car" tabindex="0" aria-label="Client references. Swipe to read more.">
+      <figure class="ref active" style="--r:-1.2deg">
+        <blockquote><span class="q">“</span>Rocco and Liam have been actively engaged with me over the last 12 months. They have <mark>tailored my portfolio to suit my stage of life</mark> and taking into account my desire for income and growth […] whilst also considering my risk profile. […] There has been no heavy selling from them at all. I am very satisfied with their level of care and interaction.<span class="q">”</span></blockquote>
+        <cite><b>R.S.</b> · Retiree, WA · Client for over 12 months</cite>
+      </figure>
+      <figure class="ref" style="--r:1.2deg">
+        <blockquote><span class="q">“</span>Liam Walker has been my Financial Advisor for around 2 years. […] I made my first self-managed very significant wholesale investment […] prior to me meeting Liam. This now appears a poor and ill-informed decision. This decision lead to my subsequent commencement of Liam’s Financial Advisor services and, so far, I am very pleased with my decision to do so. Liam has been able to introduce me to several far superior investments over the last couple of years. […] I feel that my interests have been properly listened to, considered and prioritised by Liam throughout our relationship and I feel that Liam is on my side, wishes me success and has my best interests at heart. […] <mark>My dealings with Boston Global Wealth have only been positive and superior to my previous experiences</mark> with investment firms and investment houses as well, so I have absolutely no hesitation in recommending that you consider Liam for advice and direction in managing your investment portfolio. I find it an absolute pleasure to work with him.<span class="q">”</span></blockquote>
+        <cite><b>D.T.</b> · Business owner, QLD · Client of Liam and Rocco</cite>
+      </figure>
+    </div>
+    <div class="dots" id="dots" role="tablist" aria-label="Choose reference"><button class="on" type="button" aria-label="Reference 1"></button><button type="button" aria-label="Reference 2"></button></div>
+    <p class="hint">Swipe for more</p>
     <p class="ref-note">Client references, shortened where marked […]. They describe individual clients’ experiences, which are not typical. Nothing here is a comment on, or a promise of, investment returns.</p>
   </section>
 
-  <!-- WHAT HAPPENS AFTER YOU BOOK -->
-  <section class="sec">
-    <div class="eyebrow">What happens after you book</div>
-    <h2>Three steps, nothing to sign or pay</h2>
-    <div class="item"><b class="n">1</b><div><small>Today</small><h3>Pick a time</h3><p>About a minute: your name, email, mobile and four quick questions.</p></div></div>
-    <div class="item"><b class="n">2</b><div><small>Straight after</small><h3>Confirmation email</h3><p>Your time and the online meeting link.</p></div></div>
-    <div class="item"><b class="n">3</b><div><small>On the call</small><h3>One hour with the founders</h3><p>A conversation about your portfolio and what it needs to do, then a straight answer on whether we can help.</p></div></div>
+  <!-- WHAT HAPPENS AFTER YOU BOOK (tap to open) -->
+  <section class="sec reveal">
+    <details class="acc" id="acc">
+      <summary>What happens after you book <span class="chev">+</span></summary>
+      <p class="lede">Three steps, nothing to sign or pay.</p>
+      <div class="item"><b class="n">1</b><div><small>Today</small><h3>Pick a time</h3><p>About a minute: your name, email, mobile and four quick questions.</p></div></div>
+      <div class="item"><b class="n">2</b><div><small>Straight after</small><h3>Confirmation email</h3><p>Your time and the online meeting link.</p></div></div>
+      <div class="item"><b class="n">3</b><div><small>On the call</small><h3>One hour with the founders</h3><p>A conversation about your portfolio and what it needs to do, then a straight answer on whether we can help.</p></div></div>
+    </details>
   </section>
 
   <!-- 3. TERTIARY: NEWSLETTER (same form and handler as the home page) -->
-  <section class="card">
+  <section class="card reveal">
     <div class="eyebrow">Not ready for a call?</div>
     <h2>Get the Weekly Market Wrap</h2>
     <p>Our weekly view on markets, private credit and alternatives, straight to your inbox.</p>
@@ -163,6 +198,9 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
   <p class="legal">General advice only. Information on this page does not take into account your objectives, financial situation or needs. Boston Global Wealth Pty Ltd ABN 99 691 504 506 is a Corporate Authorised Representative (No. 1318023) of Advisory Circle Pty Ltd ABN 21 629 143 460, AFSL No. 513052.<br>
   <a href="https://www.bostonglobalwealth.com.au/_files/ugd/f6deeb_38c5d5685875495e9167737adecfe1a2.pdf" data-track="fsg">FSG &amp; Privacy Statement</a> · <a href="https://roccoandliambgw.com/privacy/">Website Privacy</a></p>
 </main>
+
+
+<div class="sticky" id="sticky"><a class="btn-primary" data-track="book_call_sticky" data-book="links_sticky" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">Book your hour with Rocco and Liam</a></div>
 
 <!-- Calendly popup, newsletter submit, phone/email tracking: shared with the home page -->
 <script src="/assets/site.js" defer></script>
@@ -208,6 +246,44 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
     var p = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
     [50,90].forEach(function(t){ if (p >= t && !sent[t]) { sent[t]=1; ga('scroll_depth', { percent: t }); } });
   }, {passive:true});
+
+  // ---- Scroll reveal ----
+  var rev = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, {threshold:.12});
+    rev.forEach(function(el){ io.observe(el); });
+  } else { rev.forEach(function(el){ el.classList.add('in'); }); }
+
+  // ---- Reference carousel: active card, dots, swipe tracking ----
+  var car = document.getElementById('car'), dotWrap = document.getElementById('dots');
+  if (car && dotWrap) {
+    var cards = car.querySelectorAll('.ref'), dots = dotWrap.querySelectorAll('button'), swiped = false, tick;
+    function setActive(i){ cards.forEach(function(c,n){ c.classList.toggle('active', n===i); }); dots.forEach(function(d,n){ d.classList.toggle('on', n===i); }); }
+    car.addEventListener('scroll', function(){
+      clearTimeout(tick);
+      tick = setTimeout(function(){
+        var step = cards[1].offsetLeft - cards[0].offsetLeft, i = Math.max(0, Math.min(cards.length-1, Math.round(car.scrollLeft / step)));
+        setActive(i);
+        if (!swiped && i > 0) { swiped = true; ga('reference_swipe'); }
+      }, 60);
+    }, {passive:true});
+    dots.forEach(function(d,n){ d.addEventListener('click', function(){ car.scrollTo({left: cards[n].offsetLeft - cards[0].offsetLeft, behavior:'smooth'}); ga('reference_dot', {index:n+1}); }); });
+  }
+
+  // ---- Accordion tracking ----
+  var acc = document.getElementById('acc');
+  if (acc) acc.addEventListener('toggle', function(){ if (acc.open) ga('after_booking_open'); });
+
+  // ---- Sticky booking bar: shows once the top button has scrolled away, hides near the other booking button and while typing ----
+  var stk = document.getElementById('sticky'), topBtn = document.getElementById('bookBtn') || document.querySelector('[data-track="book_call_top"]'), hourBtn = document.getElementById('hourBtn');
+  var topGone = false, hourSeen = false, typing = false;
+  function updSticky(){ stk.classList.toggle('show', topGone && !hourSeen && !typing); }
+  if ('IntersectionObserver' in window && topBtn) {
+    new IntersectionObserver(function(en){ topGone = !en[0].isIntersecting && en[0].boundingClientRect.top < 0; updSticky(); }).observe(topBtn);
+    if (hourBtn) new IntersectionObserver(function(en){ hourSeen = en[0].isIntersecting; updSticky(); }).observe(hourBtn);
+  }
+  nl.addEventListener('focusin', function(){ typing = true; updSticky(); });
+  nl.addEventListener('focusout', function(){ typing = false; updSticky(); });
 })();
 </script>
 </body>
