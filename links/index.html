@@ -4,57 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Liam Walker & Rocco Panzarino | Links | Boston Global Wealth</title>
-<meta name="description" content="Book a complimentary call with the founders of Boston Global Wealth, watch our interviews and join the Weekly Market Wrap. Sydney.">
+<meta name="description" content="Book a free one-hour online meeting with the founders of Boston Global Wealth, watch our interviews and join the Weekly Market Wrap. Sydney.">
 <link rel="canonical" href="https://roccoandliambgw.com/links/">
 <meta property="og:title" content="Liam Walker & Rocco Panzarino | Boston Global Wealth">
-<meta property="og:description" content="Family-office-style advice for Sydney investors. Book a call with the founders.">
+<meta property="og:description" content="Family-office-style advice for Sydney investors. Book a free one-hour meeting with the founders.">
 <meta property="og:image" content="https://roccoandliambgw.com/assets/og-image.jpg">
 <meta property="og:url" content="https://roccoandliambgw.com/links/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0c0c0c">
 
-<!-- ============================================================
-     SETTINGS: fill these in before uploading (3 items)
-     1. GA_ID      -> GA4 Measurement ID (starts with G-). Copy it from the
-                      gtag snippet in the current /links/ page head, or GA4
-                      Admin > Data streams > your stream.
-     2. EMAILJS_*  -> copy the same three values the current newsletter form
-                      uses (service ID, template ID, public key).
-     The Meta Pixel ID is already set.
-     ============================================================ -->
-<script>
-  window.BGW = {
-    GA_ID: 'G-XXXXXXXXXX',
-    PIXEL_ID: '972349529038336',
-    EMAILJS_SERVICE_ID: 'REPLACE_SERVICE_ID',
-    EMAILJS_TEMPLATE_ID: 'REPLACE_TEMPLATE_ID',
-    EMAILJS_PUBLIC_KEY: 'REPLACE_PUBLIC_KEY'
-  };
-</script>
-
-<!-- Google Analytics 4 -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  if (BGW.GA_ID.indexOf('XXXX') === -1) {
-    var gs = document.createElement('script'); gs.async = true;
-    gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + BGW.GA_ID;
-    document.head.appendChild(gs);
-    gtag('config', BGW.GA_ID);
-  } else { console.warn('BGW: set GA_ID in the settings block'); }
-</script>
-
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', BGW.PIXEL_ID);
-fbq('track', 'PageView');
-</script>
+<!-- Shared site tracking: Meta Pixel, GA4 (G-Z08MJGQLNM), Google Ads, HubSpot and UTM capture.
+     Same file the home page uses, so /links/ reports to the same GA4 property and Pixel. -->
+<script src="/assets/track.js"></script>
 
 <style>
 :root{--black:#0c0c0c;--ink:#1a1a1a;--cream:#efe0cc;--orange:#e36b43;--orange-dark:#c5552f;--grey:#a9a39a;--line:#2a2a2a}
@@ -63,6 +24,8 @@ html{-webkit-text-size-adjust:100%}
 body{font-family:Inter,"Helvetica Neue","Segoe UI",Arial,sans-serif;background:var(--black);color:var(--cream);line-height:1.45;min-height:100vh}
 .wrap{max-width:480px;margin:0 auto;padding:20px 20px calc(32px + env(safe-area-inset-bottom))}
 .logo{display:block;width:150px;margin:4px auto 16px}
+.strip{background:#16110e;border:1px solid var(--line);border-radius:10px;padding:9px 12px;text-align:center;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--cream);margin-bottom:18px}
+.strip i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3ddc84;margin-right:7px;vertical-align:1px}
 .lead-in{display:none;text-align:center;color:var(--orange);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
 h1{font-size:27px;line-height:1.18;text-align:center;font-weight:800;letter-spacing:-.01em}
 h1 em{font-style:normal;color:var(--orange)}
@@ -70,16 +33,30 @@ h1 em{font-style:normal;color:var(--orange)}
 .btn-primary{display:block;background:var(--orange);color:#fff;text-decoration:none;text-align:center;border-radius:14px;padding:18px 16px;font-weight:800;font-size:19px;box-shadow:0 8px 24px rgba(227,107,67,.28)}
 .btn-primary small{display:block;font-weight:500;font-size:13px;opacity:.95;margin-top:4px}
 .btn-primary:active{background:var(--orange-dark)}
-.trust{text-align:center;color:var(--grey);font-size:12px;margin:12px 0 22px}
-.video{position:relative;border-radius:14px;overflow:hidden;background:var(--ink);aspect-ratio:4/5;border:1px solid var(--line);cursor:pointer}
-.video img{width:100%;height:100%;object-fit:cover;opacity:.75;display:block}
-.video .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;text-shadow:0 2px 8px #000}
-.video .play span{width:64px;height:64px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;padding-left:5px;text-shadow:none}
-.video iframe{width:100%;height:100%;border:0;background:#000}
+.trust{text-align:center;color:var(--grey);font-size:12px;margin:12px 0 6px}
+.qual{text-align:center;color:var(--grey);font-size:12px;margin:0 0 22px}
 .row{display:flex;gap:10px;margin-top:10px}
 .btn-ghost{flex:1;text-align:center;text-decoration:none;color:var(--cream);border:1.5px solid #4a4a4a;border-radius:12px;padding:13px 8px;font-weight:700;font-size:15px}
 .btn-ghost small{display:block;font-weight:500;font-size:12px;color:var(--grey)}
-.card{margin-top:26px;background:var(--ink);border:1px solid var(--line);border-radius:16px;padding:20px}
+.ref{background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px}
+.ref blockquote{font-size:14.5px;line-height:1.55;color:var(--cream)}
+.ref blockquote .q{color:var(--orange);font-size:30px;line-height:0;vertical-align:-9px;font-weight:800}
+.ref .clamp{max-height:11.5em;overflow:hidden;position:relative}
+.ref .clamp::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3.2em;background:linear-gradient(transparent,var(--ink))}
+.ref .more{background:none;border:0;color:var(--orange);font-weight:700;font-size:13.5px;margin-top:8px;cursor:pointer;font-family:inherit;padding:0}
+.ref cite{display:block;font-style:normal;font-size:12.5px;color:var(--grey);margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.ref cite b{color:var(--cream)}
+.ref-note{font-size:11px;color:#7d7870;margin-top:6px}
+.sec{margin-top:30px}
+.sec .eyebrow{color:var(--orange);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-align:center}
+.sec h2{font-size:21px;text-align:center;margin:6px 0 16px}
+.item{display:flex;gap:14px;margin-bottom:14px}
+.item b.n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+.item h3{font-size:16px;margin-bottom:2px}
+.item p{font-size:14px;color:var(--grey)}
+.item small{display:block;color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.sec .btn-primary{margin-top:18px}
+.card{margin-top:30px;background:var(--ink);border:1px solid var(--line);border-radius:16px;padding:20px}
 .card .eyebrow{color:var(--orange);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
 .card h2{font-size:20px;margin:6px 0 6px}
 .card p{font-size:14px;color:var(--grey);margin-bottom:14px}
@@ -88,10 +65,10 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
 .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
 .btn-sub{width:100%;background:transparent;color:var(--orange);border:2px solid var(--orange);border-radius:12px;padding:13px;font-weight:800;font-size:16px;cursor:pointer;font-family:inherit}
 .btn-sub:disabled{opacity:.5}
+#nl-status{font-size:14px;margin-top:10px;font-weight:600;color:#ff8a6b}
+.nl-done{font-size:16px;font-weight:700;color:#8bd48b;margin:0}
 .consent{font-size:11px;color:var(--grey);margin-top:10px}
 .consent a{color:var(--grey)}
-.msg{display:none;font-size:14px;margin-top:10px;font-weight:600}
-.msg.ok{color:#8bd48b}.msg.err{color:#ff8a6b}
 .foot-links{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin:26px 0 6px;font-size:14px}
 .foot-links a{color:var(--cream);text-decoration:none;border-bottom:1px solid #4a4a4a;padding-bottom:1px}
 .legal{font-size:11px;color:#7d7870;margin-top:18px}
@@ -102,40 +79,74 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
 <main class="wrap">
   <a href="https://roccoandliambgw.com/" data-track="logo_home"><img class="logo" src="https://roccoandliambgw.com/assets/logo.png" alt="Boston Global Wealth"></a>
 
+  <div class="strip"><i></i>One-hour online meeting · No cost · With the founders</div>
   <div class="lead-in" id="leadIn"></div>
   <h1>Built real wealth? Let's make sure it's <em>working as hard as you are.</em></h1>
   <p class="sub">Liam Walker &amp; Rocco Panzarino · Founding Partners · Sydney</p>
 
-  <!-- 1. PRIMARY ACTION -->
-  <a class="btn-primary" id="bookBtn" data-track="book_call" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">
-    Book your hour with us
-    <small>Portfolio review & introductory call with the founders </small>
+  <!-- 1. PRIMARY ACTION (data-book opens the Calendly popup via /assets/site.js) -->
+  <a class="btn-primary" data-track="book_call_top" data-book="links_top" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">
+    Book your hour with Rocco and Liam
+    <small>Free · online · portfolio and property review · no obligation</small>
   </a>
   <p class="trust">Corporate Authorised Representative of Advisory Circle Pty Ltd · AFSL 513052</p>
+  <p class="qual">For wholesale investors: $2.5 million net assets (home and super count) or $250,000 gross income a year.</p>
 
-  <!-- 2. SECONDARY: VIDEO -->
-  <div class="video" id="video" role="button" tabindex="0" aria-label="Play video: meet Liam">
-    <img src="https://roccoandliambgw.com/assets/hero.jpg" alt="Liam Walker and Rocco Panzarino" loading="lazy">
-    <div class="play"><span>▶</span>Meet Liam &amp; Rocco (3 min)</div>
-  </div>
+  <!-- 2. SECONDARY: INTERVIEWS -->
   <div class="row">
     <a class="btn-ghost" data-track="meet_liam" href="https://www.instagram.com/reel/DeqbWVbpsmq/">Meet Liam<small>3-min interview</small></a>
     <a class="btn-ghost" data-track="meet_rocco" href="https://www.instagram.com/reel/DesJcNbhaky/">Meet Rocco<small>3-min interview</small></a>
   </div>
 
-  <!-- 3. TERTIARY: NEWSLETTER -->
+  <!-- WHAT YOU GET -->
+  <section class="sec">
+    <div class="eyebrow">What you get</div>
+    <h2>What we cover in the hour</h2>
+    <div class="item"><b class="n">1</b><div><h3>How your money is set up</h3><p>What you own across every entity, what it costs, and whether it adds up to what the money has to do for you.</p></div></div>
+    <div class="item"><b class="n">2</b><div><h3>Where your income comes from</h3><p>How reliable it is and the risk you take to earn it.</p></div></div>
+    <div class="item"><b class="n">3</b><div><h3>What a more diversified portfolio could look like</h3><p>Including private and alternative investments alongside shares you can sell any day.</p></div></div>
+    <a class="btn-primary" data-track="book_call_hour" data-book="links_hour" href="https://calendly.com/liam-bostonglobalwealth/introductory-call">Book your hour with Rocco and Liam<small>No cost · no obligation</small></a>
+  </section>
+
+  <!-- CLIENT REFERENCES (shortened where marked […]; compliance to approve before publishing) -->
+  <section class="sec" id="references">
+    <div class="eyebrow">What clients say</div>
+    <h2>In their own words</h2>
+    <figure class="ref">
+      <blockquote><span class="q">“</span>Rocco and Liam have been actively engaged with me over the last 12 months. They have tailored my portfolio to suit my stage of life and taking into account my desire for income and growth […] whilst also considering my risk profile. […] There has been no heavy selling from them at all. I am very satisfied with their level of care and interaction.<span class="q">”</span></blockquote>
+      <cite><b>R.S.</b> · Retiree, WA · Client for over 12 months</cite>
+    </figure>
+    <figure class="ref">
+      <blockquote><span class="q">“</span>Liam Walker has been my Financial Advisor for around 2 years. […] I made my first self-managed very significant wholesale investment […] prior to me meeting Liam. This now appears a poor and ill-informed decision. This decision lead to my subsequent commencement of Liam’s Financial Advisor services and, so far, I am very pleased with my decision to do so. Liam has been able to introduce me to several far superior investments over the last couple of years. […] I feel that my interests have been properly listened to, considered and prioritised by Liam throughout our relationship and I feel that Liam is on my side, wishes me success and has my best interests at heart. […] My dealings with Boston Global Wealth have only been positive and superior to my previous experiences with investment firms and investment houses as well, so I have absolutely no hesitation in recommending that you consider Liam for advice and direction in managing your investment portfolio. I find it an absolute pleasure to work with him.<span class="q">”</span></blockquote>
+      <cite><b>D.T.</b> · Business owner, QLD · Client of Liam and Rocco</cite>
+    </figure>
+    <p class="ref-note">Client references, shortened where marked […]. They describe individual clients’ experiences, which are not typical. Nothing here is a comment on, or a promise of, investment returns.</p>
+  </section>
+
+  <!-- WHAT HAPPENS AFTER YOU BOOK -->
+  <section class="sec">
+    <div class="eyebrow">What happens after you book</div>
+    <h2>Three steps, nothing to sign or pay</h2>
+    <div class="item"><b class="n">1</b><div><small>Today</small><h3>Pick a time</h3><p>About a minute: your name, email, mobile and four quick questions.</p></div></div>
+    <div class="item"><b class="n">2</b><div><small>Straight after</small><h3>Confirmation email</h3><p>Your time and the online meeting link.</p></div></div>
+    <div class="item"><b class="n">3</b><div><small>On the call</small><h3>One hour with the founders</h3><p>A conversation about your portfolio and what it needs to do, then a straight answer on whether we can help.</p></div></div>
+  </section>
+
+  <!-- 3. TERTIARY: NEWSLETTER (same form and handler as the home page) -->
   <section class="card">
-    <div class="eyebrow">Not ready to talk yet?</div>
+    <div class="eyebrow">Not ready for a call?</div>
     <h2>Get the Weekly Market Wrap</h2>
     <p>Our weekly view on markets, private credit and alternatives, straight to your inbox.</p>
-    <form id="nl" novalidate>
-      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" required>
+    <form id="newsletter-form" name="newsletter" action="/" method="POST">
+      <input type="hidden" name="form-name" value="newsletter">
+      <input type="text" name="bot-field" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+      <input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="first_source"><input type="hidden" name="landing_page">
+      <input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required>
       <input type="email" name="email" placeholder="Email" autocomplete="email" required>
-      <input type="tel" name="mobile" placeholder="Mobile (optional)" autocomplete="tel">
-      <button class="btn-sub" type="submit" id="nlBtn">Subscribe</button>
-      <div class="msg ok" id="nlOk">Thanks. You're on the list.</div>
-      <div class="msg err" id="nlErr">Something went wrong. Please try again or email us.</div>
+      <input type="tel" name="phone" placeholder="Mobile" autocomplete="tel" required>
+      <button class="btn-sub" type="submit">Subscribe</button>
+      <div id="nl-status" role="status"></div>
       <p class="consent">By subscribing you agree to receive emails from Boston Global Wealth. Unsubscribe any time. See our <a href="https://roccoandliambgw.com/privacy/">privacy policy</a>.</p>
     </form>
   </section>
@@ -151,16 +162,15 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
   <a href="https://www.bostonglobalwealth.com.au/_files/ugd/f6deeb_38c5d5685875495e9167737adecfe1a2.pdf" data-track="fsg">FSG &amp; Privacy Statement</a> · <a href="https://roccoandliambgw.com/privacy/">Website Privacy</a></p>
 </main>
 
+<!-- Calendly popup, newsletter submit, phone/email tracking: shared with the home page -->
+<script src="/assets/site.js" defer></script>
+
 <script>
 (function(){
-  // ---------- helpers ----------
-  var params = new URLSearchParams(location.search);
-  function ga(name, extra){
-    try { gtag('event', name, Object.assign({transport_type:'beacon', page_location: location.href}, extra||{})); } catch(e){}
-  }
-  function px(type, name, data){ try { fbq(type, name, data||{}); } catch(e){} }
+  // GA4 event for every button (gtag is defined by /assets/track.js)
+  function ga(name, extra){ try { gtag('event', name, Object.assign({transport_type:'beacon'}, extra||{})); } catch(e){} }
 
-  // ---------- message match from UTM campaign (e.g. ?utm_campaign=property) ----------
+  // Message match from the campaign tag, e.g. ?utm_campaign=property
   var leadIns = {
     property: 'Saw our video on property risk?',
     sharemarket: 'Saw our video on managing a growing portfolio?',
@@ -168,70 +178,34 @@ input:focus{outline:2px solid var(--orange);border-color:transparent}
     oil: 'Saw our video on oil, inflation and rates?',
     recession: 'Saw our video on bond yields and the economy?'
   };
-  var camp = (params.get('utm_campaign') || params.get('ref') || '').toLowerCase();
+  var camp = (new URLSearchParams(location.search).get('utm_campaign') || '').toLowerCase();
   if (leadIns[camp]) { var li = document.getElementById('leadIn'); li.textContent = leadIns[camp]; li.style.display = 'block'; }
 
-  // ---------- click tracking on every tracked link ----------
-  var pixelMap = { book_call:['trackCustom','BookCallClick'], call_us:['track','Contact'], email_us:['track','Contact'] };
+  // Click events on every tracked button / link
   document.querySelectorAll('[data-track]').forEach(function(el){
     el.addEventListener('click', function(){
       var id = el.getAttribute('data-track');
       ga('click_' + id, { link_url: el.href, link_text: (el.textContent||'').trim().slice(0,60) });
-      if (id === 'book_call') ga('book_call_click', { link_url: el.href });
-      if (pixelMap[id]) px(pixelMap[id][0], pixelMap[id][1]);
+      if (id.indexOf('book_call') === 0) ga('book_call_click', { cta_position: id });
     });
   });
 
-  // ---------- video: tap to load, tracked ----------
-  var v = document.getElementById('video');
-  function playVideo(){
-    if (v.querySelector('iframe')) return;
-    ga('video_play', { video_title: 'Meet Liam' });
-    px('trackCustom','VideoPlay');
-    v.innerHTML = '<iframe src="https://www.instagram.com/reel/DeqbWVbpsmq/embed" allowfullscreen loading="lazy" title="Meet Liam"></iframe>';
-  }
-  v.addEventListener('click', playVideo);
-  v.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' ') { e.preventDefault(); playVideo(); } });
+  // Read-more on the long reference
+  var rb = document.getElementById('ref2btn'), r2 = document.getElementById('ref2');
+  if (rb) rb.addEventListener('click', function(){ var open = r2.classList.toggle('clamp') === false; rb.textContent = open ? 'Show less' : 'Read the full reference'; rb.setAttribute('aria-expanded', open); if (open) ga('reference_expand', {reference:'D.T.'}); });
 
-  // ---------- scroll depth (50%, 90%) ----------
+  // References section seen
+  var rs = document.getElementById('references');
+  if (rs && 'IntersectionObserver' in window) { var ro = new IntersectionObserver(function(en){ if (en[0].isIntersecting) { ga('references_view'); ro.disconnect(); } }, {threshold:.4}); ro.observe(rs); }
+
+  // Newsletter form start + scroll depth
+  var nl = document.getElementById('newsletter-form'), started = false;
+  nl.addEventListener('focusin', function(){ if(!started){ started = true; ga('newsletter_form_start'); } });
   var sent = {};
   window.addEventListener('scroll', function(){
     var p = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
     [50,90].forEach(function(t){ if (p >= t && !sent[t]) { sent[t]=1; ga('scroll_depth', { percent: t }); } });
   }, {passive:true});
-
-  // ---------- newsletter (EmailJS REST) ----------
-  var f = document.getElementById('nl'), btn = document.getElementById('nlBtn');
-  var started = false;
-  f.addEventListener('focusin', function(){ if(!started){ started = true; ga('newsletter_form_start'); } });
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    document.getElementById('nlOk').style.display = 'none';
-    document.getElementById('nlErr').style.display = 'none';
-    if (f.website.value) return; // honeypot
-    var first = f.first_name.value.trim(), email = f.email.value.trim();
-    if (!first || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { document.getElementById('nlErr').textContent = 'Please enter your first name and a valid email.'; document.getElementById('nlErr').style.display='block'; return; }
-    btn.disabled = true; btn.textContent = 'Subscribing…';
-    fetch('https://api.emailjs.com/api/v1.0/email/send', {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        service_id: BGW.EMAILJS_SERVICE_ID, template_id: BGW.EMAILJS_TEMPLATE_ID, user_id: BGW.EMAILJS_PUBLIC_KEY,
-        template_params: { form_type:'Weekly Market Wrap signup', first_name:first, email:email, mobile:f.mobile.value.trim(), page:location.href, source: params.get('utm_source')||'', campaign: params.get('utm_campaign')||'' }
-      })
-    }).then(function(r){
-      if (!r.ok) throw new Error('send failed');
-      ga('generate_lead', { method:'newsletter', form:'weekly_market_wrap' });
-      ga('newsletter_submit');
-      px('track','Lead');
-      document.getElementById('nlOk').style.display = 'block';
-      f.reset(); btn.textContent = 'Subscribed';
-    }).catch(function(){
-      document.getElementById('nlErr').textContent = 'Something went wrong. Please try again or email us.';
-      document.getElementById('nlErr').style.display = 'block';
-      btn.disabled = false; btn.textContent = 'Subscribe';
-      ga('newsletter_error');
-    });
-  });
 })();
 </script>
 </body>
